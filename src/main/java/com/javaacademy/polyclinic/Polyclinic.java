@@ -1,9 +1,11 @@
 package com.javaacademy.polyclinic;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
+@Getter
 public class Polyclinic {
 
     private Doctor dentist;
