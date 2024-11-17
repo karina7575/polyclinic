@@ -9,20 +9,20 @@ import java.math.BigDecimal;
 public class DoctorConfig {
 
     @Bean
-    public Doctor doctor1() {
-        return new Doctor(BigDecimal.valueOf(2500), Specialization.DENTIST);
+    public Doctor dentist() {
+        return new Doctor(BigDecimal.valueOf(1500), Specialization.DENTIST);
     }
     @Bean
-    public Doctor doctor2() {
-        return new Doctor(BigDecimal.valueOf(1500), Specialization.THERAPIST);
+    public Doctor therapist() {
+        return new Doctor(BigDecimal.valueOf(500), Specialization.THERAPIST);
     }
     @Bean
-    public Doctor doctor3() {
+    public Doctor surgeonJunior() {
+        return new Doctor(BigDecimal.valueOf(700), Specialization.SURGEON);
+    }
+    @Bean
+    public Doctor surgeonSenyor() {
         return new Doctor(BigDecimal.valueOf(2000), Specialization.SURGEON);
-    }
-    @Bean
-    public Doctor doctor4() {
-        return new Doctor(BigDecimal.valueOf(3000), Specialization.SURGEON);
     }
 
 }

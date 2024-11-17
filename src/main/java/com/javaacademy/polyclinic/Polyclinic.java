@@ -6,21 +6,39 @@ import org.springframework.stereotype.Component;
 @Component
 public class Polyclinic {
 
-    private Doctor doctor1;
-    private Doctor doctor2;
-    private Doctor doctor3;
-    private Doctor doctor4;
+    private Doctor dentist;
+    private Doctor therapist;
+    private Doctor surgeonJunior;
+    private Doctor surgeonSenyor;
     private CashBox cashbox;
 
-    public Polyclinic(@Qualifier ("doctor1") Doctor doctor1,
-                      @Qualifier ("doctor2") Doctor doctor2,
-                      @Qualifier ("doctor2") Doctor doctor3,
-                      @Qualifier ("doctor4") Doctor doctor4,
+    public Polyclinic(@Qualifier ("dentist") Doctor doctor1,
+                      @Qualifier ("therapist") Doctor doctor2,
+                      @Qualifier ("surgeonJunior") Doctor doctor3,
+                      @Qualifier ("surgeonSenyor") Doctor doctor4,
                       @Qualifier ("cashbox") CashBox cashbox) {
-        this.doctor1 = doctor1;
-        this.doctor2 = doctor2;
-        this.doctor3 = doctor3;
-        this.doctor4 = doctor4;
+        this.dentist = doctor1;
+        this.therapist = doctor2;
+        this.surgeonJunior = doctor3;
+        this.surgeonSenyor = doctor4;
         this.cashbox = cashbox;
     }
+
+    public void treatDentist() {
+        dentist.curePeople();
+        cashbox.acceptPayment(dentist.getCost());
+    }
+    public void treatTherapist() {
+        dentist.curePeople();
+        cashbox.acceptPayment(therapist.getCost());
+    }
+    public void treatsurgeonJunior() {
+        dentist.curePeople();
+        cashbox.acceptPayment(surgeonJunior.getCost());
+    }
+    public void treatsurgeonSenyor() {
+        dentist.curePeople();
+        cashbox.acceptPayment(surgeonSenyor.getCost());
+    }
+
 }
