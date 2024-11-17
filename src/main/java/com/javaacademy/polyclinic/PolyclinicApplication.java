@@ -10,12 +10,12 @@ public class PolyclinicApplication {
 	public static void main(String[] args) {
 
 		ConfigurableApplicationContext context = SpringApplication.run(PolyclinicApplication.class, args);
-		Polyclinic bean = context.getBean(Polyclinic.class);
-		bean.treatDentist();
-		bean.treatTherapist();
-		bean.treatsurgeonJunior();
-		bean.treatsurgeonSenyor();
-		bean.getCashbox().printIncome();
+		Polyclinic polyclinic = context.getBean(Polyclinic.class);
+		polyclinic.treatDentist();
+		polyclinic.treatTherapist();
+		polyclinic.treatSurgeonJunior();
+		polyclinic.treatSurgeonSenyor();
+		polyclinic.getCashbox().printIncome();
 
 	}
 
