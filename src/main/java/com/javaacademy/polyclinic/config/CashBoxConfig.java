@@ -1,9 +1,8 @@
-package com.javaacademy.polyclinic;
+package com.javaacademy.polyclinic.config;
 
+import com.javaacademy.polyclinic.CashBox;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.math.BigDecimal;
 
 @Configuration
 public class CashBoxConfig {

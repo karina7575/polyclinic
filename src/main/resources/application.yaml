@@ -1,0 +1,7 @@
+doctor:
+  rate-dentist: 1500
+  rate-therapist: 500
+  rate-surgeon-junior: 700
+  rate-surgeon-senyor: 2000
+
+
